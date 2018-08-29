@@ -1,0 +1,12 @@
+.OrderSummary {
+  background-color: #d9ecd0;
+  border-radius: 3px;
+  padding: 19px;
+
+}
+.OrderSummaryPrice {
+  background-color: #d9ecd0;
+  border-radius: 3px;
+  padding: 4px;
+  color: #484f4f
+}

@@ -30,10 +30,10 @@ state = {
 addIngredientHandler = (type) =>  {
   const oldCount = this.state.ingredients[type]; //tipo de ingrediente en oldCount
   const updateCount = oldCount +1; //sumo1
-  const updatedIngredients = { //nuevoArray
-    ...this.state.ingredients  //paso todo el contenido del viejo array
+  const updatedIngredients = { //nuevoObjeto
+    ...this.state.ingredients  //paso todo el contenido del viejo objeto
   };
-  updatedIngredients[type] = updateCount //al nuevo array en la posicion type le asigno el valor nuevo
+  updatedIngredients[type] = updateCount //al nuevo obje en la posicion type le asigno el valor nuevo
   const priceAdition = INGREDIENT_PRICES[type] //precio del ipo de ingrediente
   const oldPrice = this.state.totalPrice
   const newPrice = oldPrice + priceAdition
@@ -109,7 +109,9 @@ purchaseContinueHandler = () => {
                 <OrderSummary
                   purchaseCanceled={this.purchaseCancelHandler}
                   purchaseContinue={this.purchaseContinueHandler}
-                  ingredients={this.state.ingredients}/>
+                  ingredients={this.state.ingredients}
+                  totalPrice = {this.state.totalPrice}
+                />
               </Modal>
               <Burguer ingredients={this.state.ingredients}/>
               <BuildControls
