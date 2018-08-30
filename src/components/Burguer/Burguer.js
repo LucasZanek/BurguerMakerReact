@@ -14,7 +14,7 @@ const burguer = (props) => {
   .reduce((prev,curren) =>{
     return prev.concat(curren)
   },[])
-  console.log(transformIngredients)
+  
 
   if(transformIngredients.length === 0){
     transformIngredients = <p>Please start Adding Ingredients</p>

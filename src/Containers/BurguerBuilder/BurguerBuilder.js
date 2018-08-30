@@ -86,7 +86,7 @@ updatePurchaseState (ingredients) {
 
 purchaseModHandler = () => {
   this.setState({purchaseMod:true})
-  console.log(this.state.purchaseMod)
+
 }
 
 purchaseCancelHandler = () => {
@@ -103,7 +103,7 @@ purchaseContinueHandler = () => {
     for(let key in disableInfo) {
       disableInfo[key] = disableInfo[key] <= 0
     }
-    console.log(disableInfo)
+
     return  (<Aux>
               <Modal show={this.state.purchaseMod} modalClosed={this.purchaseCancelHandler}>
                 <OrderSummary
